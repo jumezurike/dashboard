@@ -1,4 +1,6 @@
-# dashboard
+# Dashboard
+Simple charted dash. 
+
 This code was tested on virustotal.com for malware and etc..
 
 Find the screenshot with the hash there. 
