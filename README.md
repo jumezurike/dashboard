@@ -1,6 +1,9 @@
-# dashboard
+# Dashboard
 
-test url : https://dreamy-brattain-a8e1c0.netlify.app/
+Simple charted dash.
 
-SHA-1 4a68ee2a207a78b96ec6ccc55e33d0cf1647aae1
-SHA-256 74a9aef618e2fa0c4a3c0c3bff9ee513d9fca89b3eee12419db45e499c25c1b9
+This code was tested on virustotal.com for malware and etc..
+
+Find the screenshot with the hash there.
+
+1.  url tested the result in screenshot 2. the file uploaded with the hashes displayed and screenshot from vrisuttotal.com 3. Put all in a zip file and send to the repo. Please compare the result and match if not let us know.
