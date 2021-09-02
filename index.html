@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+            integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="menu-icon">
+                <i class="fas fa-bars header__menu"></i>
+            </div>
+
+            <header class="header">
+                <div class="header__search">
+                    <img src="./images/xpres_logo.png" alt="xpres logo" height="35" width="37">
+                </div>
+                <div class="header__avatar">
+                    <img src="./images/lokdon_logo.png" alt="lokdon logo" height="45" width="57">
+                </div>
+            </header>
+
+            <aside class="sidenav">
+                <div>
+                    <i class="fas fa-home sidebar_home-icon"></i>
+                </div>
+                <div class="sidenav__close-icon">
+                    <i class="fas fa-times sidenav__brand-close"></i>
+                </div>
+                <ul class="sidenav__list">
+                    <p>ShieldUp ver xxx.xxxx.xxx <br>
+                        OS Version: VXX <br>
+                        Up Time since: 1245:mm: ss
+                    </p>
+                    <div class="button">
+                        <button>App Drift</button>
+                        <button>Firewall</button>
+                        <br>
+                        <br>
+
+                        <button>Antivirus</button>
+                        <button>All IPs</button>
+                    </div>
+                    <hr>
+                    <li class="sidenav__list-item"><button>Total Domain Counts</button></li>
+                    <li class="sidenav__list-item"><button>System Log</button></li>
+                    <li class="sidenav__list-item"><button>Home Directory</button></li>
+                    <li class="sidenav__list-item"><button>Sudo Users</button></li>
+
+                </ul>
+            </aside>
+
+            <main class="main">
+                <h6 class="main_severity">Issue Severity Code</h6>
+                <div class="main_box">
+                    <span class="box" id="red"></span>
+                    <span class="box" id="pop"></span>
+                    <span class="box" id="blue"></span>
+                    <span class="box" id="yellow"></span>
+                </div>
+
+                <div class="main-header">
+                    <div class="container">
+                        <div class="first_row">
+                            <div class="pie_chart">
+
+                                <div id="pie_os">
+                                </div>
+
+                            </div>
+                            <div class="line_chart">
+
+                                <div id="line_chart">
+
+                                </div>
+
+                            </div>
+                            <div class="pie_chart">
+
+                                <div id="pie_server">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="second_row">
+                            <div class="pie_chart">
+
+                                <div id="pie_issues">
+                                </div>
+
+                            </div>
+                            <div class="pie_chart">
+
+                                <div id="pie_ip">
+
+                                </div>
+
+                            </div>
+                            <div class="bar_chart">
+
+                                <div id="bar_usb">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </main>
+
+            <footer class="footer">
+                <div class="footer__copyright">&copy; 2021 Lokdon</div>
+                <div class="footer__signature"></div>
+            </footer>
+        </div>
+        <script src='https://cdn.jsdelivr.net/npm/apexcharts'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

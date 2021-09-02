@@ -1,0 +1,263 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: black;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+
+/* Assign grid instructions to our parent grid container, mobile-first (hide the sidenav) */
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 50px 1fr 50px;
+	grid-template-areas:
+		'header'
+		'main'
+		'footer';
+	height: 100vh;
+}
+
+.menu-icon {
+	position: fixed; /* Needs to stay visible for all mobile scrolling */
+	display: flex;
+	top: 5px;
+	left: 10px;
+	align-items: center;
+	justify-content: center;
+	background-color: #ba873e;
+	border-radius: 50%;
+	z-index: 1;
+	cursor: pointer;
+	padding: 12px;
+}
+
+/* Give every child element its grid name */
+.header {
+	grid-area: header;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 16px;
+	background-color: #fff;
+}
+
+/* Make room for the menu icon on mobile */
+.header__search {
+	margin-left: 52px;
+}
+.header__avatar {
+	margin-right: 25px;
+	justify-content: center;
+}
+
+.sidenav {
+	grid-area: sidenav;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 240px;
+	position: fixed;
+	overflow-y: auto;
+	transform: translateX(-245px);
+	transition: all 0.6s ease-in-out;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+	z-index: 2; /* Needs to sit above the hamburger menu icon */
+	background-color: #ba873e;
+}
+
+.sidenav.active {
+	transform: translateX(0);
+}
+
+.sidenav__close-icon {
+	position: absolute;
+	visibility: visible;
+	top: 8px;
+	right: 12px;
+	cursor: pointer;
+	font-size: 20px;
+	color: #ddd;
+}
+.sidebar_home-icon {
+	margin-top: 12px;
+	margin-left: 100px;
+	color: #fff;
+}
+
+.sidenav__list {
+	padding: 0;
+	margin-top: 27px;
+	list-style-type: none;
+}
+
+.sidenav__list-item {
+	padding: 20px 20px 20px 40px;
+	color: #ddd;
+}
+.sidenav__list-item button {
+	height: 46px;
+	width: 169px;
+	border-radius: 30px;
+	background: #ffffff;
+	border: #fff;
+}
+
+button:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+}
+.sidenav p {
+	/* font-family: Product Sans; */
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: 0em;
+	text-align: center;
+	color: #fff;
+}
+.button {
+	margin-left: 28px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+.button button {
+	height: 36px;
+	width: 82px;
+	border-radius: 30px;
+	background: #ffffff;
+	font-size: 12px;
+	border: #fff;
+	cursor: pointer;
+}
+.button button:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+}
+
+hr {
+	width: 180px;
+	height: 0px;
+	border: 1px solid #ffdada;
+}
+
+.main {
+	grid-area: main;
+	background-color: rgb(255, 249, 249);
+}
+
+.main_severity {
+	height: 18px;
+	width: 136px;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: 0em;
+	color: #645c5c;
+	margin-left: 45px;
+}
+.main_box {
+	height: 50px;
+	width: 400px;
+	margin-left: 45px;
+	border-radius: 0px;
+}
+.main_box .box {
+	width: 56px;
+	height: inherit;
+	display: inline-block;
+}
+
+#red {
+	background-color: #ff0000;
+}
+#pop {
+	background-color: #ff7400;
+}
+#blue {
+	background-color: #00a3e7;
+}
+#yellow {
+	background-color: #fff11f;
+}
+.main-header {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px;
+	padding: 20px;
+	background-color: #fff0da;
+	color: slategray;
+	height: 690px;
+	border-radius: 74px;
+}
+
+.footer {
+	grid-area: footer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 16px;
+	background-color: #fff;
+}
+
+.first_row {
+	display: flex;
+	flex-direction: row;
+	margin-top: 50px;
+}
+.second_row {
+	display: flex;
+	flex-direction: row;
+	margin-top: 100px;
+	align-items: center;
+}
+
+/* Non-mobile styles, 750px breakpoint */
+@media only screen and (min-width: 46.875em) {
+	/* Show the sidenav */
+	.grid-container {
+		grid-template-columns: 240px 1fr;
+		grid-template-areas:
+			'sidenav header'
+			'sidenav main'
+			'sidenav footer';
+	}
+
+	.header__search {
+		margin-left: 0;
+	}
+
+	.sidenav {
+		position: relative;
+		transform: translateX(0);
+	}
+
+	.sidenav__close-icon {
+		visibility: hidden;
+	}
+}
+
+/* Medium screens breakpoint (1050px) */
+@media only screen and (min-width: 65.625em) {
+	/* Break out main cards into two columns */
+	.main-cards {
+		column-count: 2;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.main {
+		width: 360px;
+	}
+	.main-header {
+		height: auto;
+	}
+	.first_row {
+		flex-direction: column;
+	}
+	.second_row {
+		flex-direction: column;
+	}
+}
